@@ -1,16 +1,5 @@
 <h1 id="nav">Rendez-Vous</h1>
-<div class="page-title"></div>
-<nav>
-    <ul class="nav navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="rendezVous.inc.php" title="">Rendez-vous</a></li>
-        <li><a href="etatvaccins.html" title="">Etat Vaccins</a></li>
-        <li><a href="vaccinspourvoyages.html" title="">Vaccins pour voyages</a></li>
-        <a target="_blank" href="https://solidarites-sante.gouv.fr/IMG/pdf/calendrier_vaccinal_maj_17avril2019.pdf">Liens
-            vaccins.</a>
-    </ul>
-</nav>
-<div class="clear"></div>
+
 <?php
 if (isset($_POST['rendezvous'])) {
     $mail = isset($_POST['mail']) ? $_POST['mail'] : "";
@@ -72,3 +61,4 @@ if (isset($_POST['rendezvous'])) {
 } else {
     require_once "frmRendezvous.php";
 }
+include_once "./includes/frmRendezvous.php";
