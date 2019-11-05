@@ -1,10 +1,11 @@
 @import "reset.css";
-.headhead{
-    background-color: yellow;
+html{
+    background-color: lime;
 }
-#header{
+
+header{
     background-color: brown;
 }
-.page-heade{
-    background-color: #00b3ee;
+#page-title{
+    background-color: white;
 }
