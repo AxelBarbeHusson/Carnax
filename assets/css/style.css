@@ -1,4 +1,5 @@
 @import "reset.css";
+<<<<<<< HEAD
 
 .wrap {
   max-width: 1500px;
@@ -8,10 +9,16 @@
 
 .headhead{
     background-color: yellow;
+=======
+html{
+    background-color: lime;
+>>>>>>> cfec75e0078895745efe475881cc844594dda6db
 }
-#header{
+
+header{
     background-color: brown;
 }
+<<<<<<< HEAD
 .page-header{
     background-color: #A6D2CD;
     width: 100%
@@ -42,3 +49,8 @@ body {
   padding: 16px;
   text-decoration: none;
 }
+=======
+#page-title{
+    background-color: white;
+}
+>>>>>>> cfec75e0078895745efe475881cc844594dda6db
