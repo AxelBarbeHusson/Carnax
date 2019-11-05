@@ -1,10 +1,44 @@
 @import "reset.css";
+
+.wrap {
+  max-width: 1500px;
+  width:100%;
+  margin: 0 auto;
+}
+
 .headhead{
     background-color: yellow;
 }
 #header{
     background-color: brown;
 }
-.page-heade{
-    background-color: #00b3ee;
+.page-header{
+    background-color: #A6D2CD;
+    width: 100%
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+body {
+  background-color: #A6D2CD;
+}
+
+.navbar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #309488;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.navbar a {
+  display: block;
+  color: #fff;
+  padding: 16px;
+  text-decoration: none;
 }
