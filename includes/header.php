@@ -15,10 +15,10 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == 1) {
     <div id="page-title">
         <nav>
             <ul class="nav-navbar">
-                <li><a href="index.php?page=home">Home</a></li>
-                <li><a href="index.php?page=rdv" title="">Rendez-vous</a></li>
-                <li><a href="index.php?page=etatvaccins" title="">Etat Vaccins</a></li>
-                <li><a href="vaccinspourvoyages.html" title="">Vaccins pour voyages</a></li>
+                <li><a href="index.php?page=acceuil.inc.php ">Home</a></li>
+                <li><a href="index.php?page=rendezvous.inc.php" title="">Rendez-vous</a></li>
+                <li><a href="index.php?page=etatvaccins.inc.php" title="">Etat Vaccins</a></li>
+                <li><a href="index.php?page=vaccinspourvoyage.inc.php" title="">Vaccins pour voyages</a></li>
                 <a target="_blank" href="https://solidarites-sante.gouv.fr/IMG/pdf/calendrier_vaccinal_maj_17avril2019.pdf">Liens vaccins.</a>
             </ul>
         </nav>

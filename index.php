@@ -28,4 +28,4 @@ if (in_array($page, $contenu)) {
 } else {
     include_once "./includes/accueil.inc.php";
 }
-include_once "./includes/footer.php";
+include_once "./includes/footer.inc.php";
