@@ -18,9 +18,11 @@
         <li><a href="etatvaccins.html" title="">Etat Vaccins</a></li>
         <li><a href="vaccinspourvoyages.html" title="">Vaccins pour voyages</a></li>
         <a target="_blank" href="https://solidarites-sante.gouv.fr/IMG/pdf/calendrier_vaccinal_maj_17avril2019.pdf">Liens vaccins.</a>
+        <button class="log-button login" onclick="popupButton()">Login</button>
+        <button class="log-button register">Inscription</button>
       </ul>
       </nav><div class="clear"></div>
-      <button class="open-button" onclick="popupButton()">Login</button>
+
 
       <div class="form-popup" id="loginForm">
         <form class="form-wrap">
@@ -37,11 +39,11 @@
       <script>
         function popupButton() {
           document.getElementById("loginForm").style.display = "block";
-      }
+        }
 
-      function closeButton() {
-        document.getElementById("loginForm").style.display = "none";
-      }
+        function closeButton() {
+          document.getElementById("loginForm").style.display = "none";
+        }
     </script>
   </div>
 
