@@ -9,7 +9,7 @@ if (!isset($postal)) $postal = "";
 if (!isset($vpostal)) $vpostal = "";
 if (!isset($phone)) $phone = "";
 ?>
-<form method="post" action="#">
+<form method="post" action="index.php?page=rendezvous">
     <div class="encadrement">
         <fieldset>
 

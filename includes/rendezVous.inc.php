@@ -61,4 +61,3 @@ if (isset($_POST['rendezvous'])) {
 } else {
     require_once "frmRendezvous.php";
 }
-include_once "./includes/frmRendezvous.php";
