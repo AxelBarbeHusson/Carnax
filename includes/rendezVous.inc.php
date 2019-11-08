@@ -1,4 +1,4 @@
-<h1 id="nav">Rendez-Vous</h1>
+<h1>Rendez-Vous</h1>
 
 <?php
 if (isset($_POST['rendezvous'])) {

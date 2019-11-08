@@ -1,6 +1,6 @@
 <h1>Inscription</h1>
 <?php
-if (isset($_POST['inscr'])) {
+if (isset($_POST['inscription'])) {
     $login = isset($_POST['login']) ? $_POST['login'] : "";
     $mail = isset($_POST['mail']) ? $_POST['mail'] : "";
     $mdp = isset($_POST['mdp']) ? $_POST['mdp'] : "";
@@ -20,9 +20,9 @@ if (isset($_POST['inscr'])) {
         }
         $message .= "</ul>";
         echo $message;
-        include "formInscription.php";
+        include "frmInscription.php";
     } else {
-        $sql = "SELECT COUNT(*) FROM carnexadmin WHERE MailAdmin='". $mail . "'";
+        $sql = "SELECT COUNT(*) FROM carnexadmin WHERE MailAdmin='" . $mail . "'";
         $nombreOccurences = $pdo->query($sql)->fetchColumn();
         if ($nombreOccurences == 0) {
             $mdp = password_hash($mdp, PASSWORD_DEFAULT);
@@ -37,17 +37,15 @@ if (isset($_POST['inscr'])) {
             $query->execute();
             $msg = "Inscription OK";
             $sujet = "Validation de votre inscription";
-            $headers = 'From: manu@elysee.fr' . "\r\n" .
+            /*$headers = 'From: manu@elysee.fr' . "\r\n" .
                 'Reply-To: manu@elysee.fr' . "\r\n" .
-                'X-Mailer: PHP/' . phpversion();
-            if (mail($mail, $sujet, $msg, $headers)) {
+                'X-Mailer: PHP/' . phpversion();*/
+            if (mail($mail, $sujet, $msg/*, $headers*/)) {
                 echo "Inscription OK";
-            }
-            else {
+            } else {
                 echo "Probleme d'inscription";
             }
-        }
-        else {
+        } else {
             echo "Vous êtes déjà dans la BDD";
         }
     }

@@ -1,6 +1,7 @@
 <?php
 if (!isset($nom)) $login = "";
 if (!isset($mail)) $mail = "";
+if (!isset($mdp)) $mdp = "";
 ?>
 <form method="post" action="index.php?page=inscription">
     <div>
@@ -13,10 +14,10 @@ if (!isset($mail)) $mail = "";
     </div>
     <div>
         <label for="mdp">Mot de passe&nbsp;: </label>
-        <input type="password" id="mdp" name="mdp" />
+        <input type="password" id="mdp" name="mdp" value="<?=$mdp?>" />
     </div>
     <div>
         <input type="submit" value="Valider" />
     </div>
-    <input type="hidden" name="inscr" />
+    <input type="hidden" name="inscription" />
 </form>
