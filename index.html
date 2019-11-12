@@ -4,24 +4,36 @@
         <meta charset="utf-8">
         <title>Carnax</title>
         <link rel="stylesheet" href="assets/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:300,400,500,600,700,800&display=swap" rel="stylesheet">
     </head>
 <body>
 
 <header class="page-header">
   <div class="wrap">
-    <h1>Carnax</h1>
-    <div class="page-title"></div>
-    <nav>
-      <ul class="nav navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="rendezvous.html" title="">Rendez-vous</a></li>
-        <li><a href="etatvaccins.html" title="">Etat Vaccins</a></li>
-        <li><a href="vaccinspourvoyages.html" title="">Vaccins pour voyages</a></li>
-        <a target="_blank" href="https://solidarites-sante.gouv.fr/IMG/pdf/calendrier_vaccinal_maj_17avril2019.pdf">Liens vaccins.</a>
-        <button class="log-button login" onclick="popupButton()">Login</button>
-        <button class="log-button register">Inscription</button>
-      </ul>
-      </nav><div class="clear"></div>
+    <div class="linear-gradient">
+      <h1>Les Vaccins du Bonheur</h1>
+    </div>
+      <img id="logo" src="assets/img/logov2.png" alt="logo">
+  </div>
+
+  <section id="menu">
+    <div class="wrap">
+      <div class="linear-gradient">
+
+        <nav>
+          <ul class="nav navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rendezvous.html" title="">Rendez-vous</a></li>
+            <li><a href="etatvaccins.html" title="">Etat Vaccins</a></li>
+            <li><a href="vaccinspourvoyages.html" title="">Vaccins pour voyages</a></li>
+            <a target="_blank" href="https://solidarites-sante.gouv.fr/IMG/pdf/calendrier_vaccinal_maj_17avril2019.pdf">Liens vaccins</a>
+            <button class="log-button login" onclick="popupButton()">Login</button>
+            <button class="log-button register">Inscription</button>
+          </ul>
+        </nav>
+      </div>
+
+    <div class="clear"></div>
 
 
       <div class="form-popup" id="loginForm">
@@ -44,10 +56,13 @@
         function closeButton() {
           document.getElementById("loginForm").style.display = "none";
         }
-    </script>
+      </script>
+    </div>
+  </section>
   </div>
 
 </header>
+
 
 </body>
 </html>
