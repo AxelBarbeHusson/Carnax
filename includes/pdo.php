@@ -22,11 +22,11 @@ catch(PDOException $e){
     printf("Échec de la connexion : %s\n", $e->getMessage());
     exit();
 }
-$sql="SELECT * from CARNET";
+$sql="SELECT * from Carnex";
 if(!$connexion->query($sql)) echo "Pb d'accès au CARNET";
 else{
     foreach ($connexion->query($sql) as $row)
         echo $row['PRENOM']." ".
             $row['NOM']."né(e) le ".
             $row['NAISSANCE']."<br/>";
-}*/
+}*
