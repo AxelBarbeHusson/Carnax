@@ -1,13 +1,15 @@
 <h1>Inscription</h1>
 <?php
-if (isset($_POST['inscriptions'])) {
-    $login = isset($_POST['login']) ? $_POST['login'] : "";
+if (isset($_POST['maurice'])) {
+    $nom = isset($_POST['nom']) ? $_POST['nom'] : "";
+    $prenom = isset($_POST['prenom']) ? $_POST['prenom'] : "";
     $mail = isset($_POST['mail']) ? $_POST['mail'] : "";
     $mdp = isset($_POST['mdp']) ? $_POST['mdp'] : "";
-    die("toto");
     $erreurs = array();
-    if (!(mb_strlen($login) >= 2 && ctype_alpha($login)))
-        array_push($erreurs, "Veuillez saisir votre login.");
+    if (!(mb_strlen($nom) >= 2 && ctype_alpha($nom)))
+        array_push($erreurs, "Veuillez saisir un nom correct.");
+    if (!(mb_strlen($prenom) >= 2 && ctype_alpha($prenom)))
+        array_push($erreurs, "Veuillez saisir un prénom correct.");
     if (!filter_var($mail, FILTER_VALIDATE_EMAIL))
         array_push($erreurs, "Veuillez saisir une adresse mail valide.");
     if (mb_strlen($mdp) < 6)
@@ -23,26 +25,23 @@ if (isset($_POST['inscriptions'])) {
         echo $message;
         include "frmInscription.php";
     } else {
-        $sql = "SELECT COUNT(*) FROM carnexadmin WHERE MailAdmin='" . $mail . "'";
+        $sql = "SELECT COUNT(*) FROM t_users WHERE USEMAIL='" . $mail . "'";
         $nombreOccurences = $pdo->query($sql)->fetchColumn();
         if ($nombreOccurences == 0) {
             $mdp = password_hash($mdp, PASSWORD_DEFAULT);
-            $sql = "INSERT INTO carnexadmin
-                (LoginAdmin, PasswordAdmin, MailAdmin)
-                VALUES ('" . $login . "', '" . $mdp . "', '" . $mail . "')";
+            $sql = "INSERT INTO t_users
+                (USENOM, USEPRENOM, USEMAIL, USEPASSWORD)
+                VALUES ('" . $nom . "', '" . $prenom . "', '" . $mail . "', '" . $mdp . "')";
             $query = $pdo->prepare($sql);
-            $query->bindValue('IdAdmin', PDO::PARAM_STR);
-            $query->bindValue('LoginAdmin', $login, PDO::PARAM_STR);
-            $query->bindValue('PasswordAdmin', $mdp, PDO::PARAM_STR);
-            $query->bindValue('MailAdmin', $mail, PDO::PARAM_STR);
+            $query->bindValue('USENOM', $nom, PDO::PARAM_STR);
+            $query->bindValue('USEPRENOM', $prenom, PDO::PARAM_STR);
+            $query->bindValue('USEMAIL', $mail, PDO::PARAM_STR);
+            $query->bindValue('USEPASSWORD', $mdp, PDO::PARAM_STR);
             $query->execute();
-            $msg = "Inscription OK";
+            $msg = "Inscription Ok";
             $sujet = "Validation de votre inscription";
-            /*$headers = 'From: manu@elysee.fr' . "\r\n" .
-                'Reply-To: manu@elysee.fr' . "\r\n" .
-                'X-Mailer: PHP/' . phpversion();*/
             if (mail($mail, $sujet, $msg)) {
-                echo "Inscription OK";
+                echo "Inscription ok !";
             } else {
                 echo "Probleme d'inscription";
             }
@@ -53,4 +52,3 @@ if (isset($_POST['inscriptions'])) {
 } else {
     require_once "frmInscription.php";
 }
-
