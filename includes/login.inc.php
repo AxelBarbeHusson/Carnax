@@ -1,6 +1,6 @@
 <h1>Connexion</h1>
 <?php
-/*if (isset($_POST['log'])) {
+if (isset($_POST['log'])) {
     if (isset($_POST['pseudo'])) {
         $pseudo = $_POST['pseudo'];
     } else {
@@ -46,4 +46,5 @@
     }
 } else {
     require_once "frmLogin.php";
-}*/
+}
+
