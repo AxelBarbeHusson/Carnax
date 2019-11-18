@@ -4,14 +4,18 @@
 if (isset($_POST['Kontact'])) {
     $mail = isset($_POST['mail']) ? $_POST['mail'] : "";
     $msg = isset($_POST['msg']) ? $_POST['msg'] : "";
-    $name = isset($_POST['USENOM']) ? $_POST['USENOM'] : "";
-    $prenom = isset($_POST['USEPRENOM']) ? $_POST['USEPRENOM'] : "";
+    $nom = isset($_POST['nom']) ? $_POST['nom'] : "";
+    $prenom  = isset($_POST['prenom']) ? $_POST['prenom'] : "";
     $objet = isset($_POST['objet']) ? $_POST['objet'] : "";
     $date = isset($_POST['date']) ? $_POST['date'] : "";
     $USER = isset($_POST['USER']) ? $_POST['USER'] : "";
     $erreurs = array();
     if (!filter_var($mail, FILTER_VALIDATE_EMAIL))
         array_push($erreurs, "Veuillez saisir une adresse mail valide.");
+    if (!(mb_strlen($nom) >= 2 && ctype_alpha($nom)))
+        array_push($erreurs, "Veuillez saisir un nom correct.");
+    if (!(mb_strlen($prenom ) >= 2 && ctype_alpha($prenom)))
+        array_push($erreurs, "Veuillez saisir un prénom correct.");
     if (count($erreurs) > 0) {
         $message = "<ul>";
         $i = 0;
@@ -28,12 +32,12 @@ if (isset($_POST['Kontact'])) {
         if ($nombreOccurences == 0) {
             $sql = "INSERT INTO t_carnex
                 (USEMAIL, USEMESSAGE, USEOBJET, USENOM, ID_USER ,USEPRENOM, USEDATE)
-                VALUES ('" . $mail . "', '" . $msg . "','" . $objet . "','" . $name . "','" . $date . "','" . $prenom . "','" . $USER . "')";
+                VALUES ('" . $mail . "', '" . $msg . "','" . $objet . "','" . $nom . "','" . $USER . "','" . $prenom  . "','" . $date . "')";
             $query = $pdo->prepare($sql);
             $query->bindValue('ID_USER', $USER, PDO::PARAM_STR);
             $query->bindValue('USEMAIL', $mail, PDO::PARAM_STR);
-            $query->bindValue('USEPRENOM', $prenom, PDO::PARAM_STR);
-            $query->bindValue('USENOM', $name, PDO::PARAM_STR);
+            $query->bindValue('USEPRENOM', $prenom , PDO::PARAM_STR);
+            $query->bindValue('USENOM', $nom, PDO::PARAM_STR);
             $query->bindValue('USEMESSAGE', $msg, PDO::PARAM_STR);
             $query->bindValue('USEDATE', $date, PDO::PARAM_STR);
             $query->bindValue('USEOBJET', $objet, PDO::PARAM_STR);

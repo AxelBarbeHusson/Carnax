@@ -1,7 +1,7 @@
 <?php
 if (!isset($mail)) $mail = "";
-if (!isset($name)) $name = "";
-if (!isset($prenom)) $prenom = "";
+if (!isset($nom)) $nom = "";
+if (!isset($prenom )) $prenom = "";
 if (!isset($objet)) $objet = "";
 if (!isset($msg)) $msg = "";
 if (!isset($date)) $date = "";
@@ -9,7 +9,7 @@ if (!isset($date)) $date = "";
 <form method="post" action="index.php?page=rendezVous">
     <div>
         <label for="nom">Nom&nbsp;: </label>
-        <input type="text" id="nom" name="nom" value="<?= $name ?>"/>
+        <input type="text" id="nom" name="nom" value="<?= $nom ?>"/>
     </div>
     <div>
         <label for="prenom">Prénom&nbsp;: </label>
