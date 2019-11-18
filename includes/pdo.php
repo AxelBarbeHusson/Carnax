@@ -1,5 +1,5 @@
 <?php
-try {
+/*try {
     $pdo = new PDO('mysql:host=localhost/carnex;dbname=carnex',
         'root',
         '',
@@ -10,7 +10,7 @@ try {
         ));
 } catch (PDOException $e) {
     echo "Erreur de connexion : " . $e->getMessage();
-}
+}*/
 /*require("connect.inc.php");
 // pour oracle: $dsn="oci:dbname=//serveur:1521/base
 // pour sqlite: $dsn="sqlite:/tmp/base.sqlite"
@@ -29,4 +29,4 @@ else{
         echo $row['PRENOM']." ".
             $row['NOM']."né(e) le ".
             $row['NAISSANCE']."<br/>";
-}*
+}*/

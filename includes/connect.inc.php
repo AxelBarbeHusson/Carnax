@@ -1,5 +1,5 @@
 <?php
-$USER = isset( $_GET['nom'.'prenom'])? $_GET['USER'] : "";
+/*$USER = isset( $_GET['nom'.'prenom'])? $_GET['USER'] : "";
 $mdp = isset($_GET['mdp']) ? $_GET['mdp'] : "";
 $mail =isset($_GET['mail']) ? $_GET['mail'] : "";
 $objet =isset($_GET['objet']) ? $_GET['objet'] : "";
@@ -10,4 +10,4 @@ define('mail');
 define('objet');
 define('txt');
 define('SERVER',"localhost");
-define('BASE');
+define('BASE');*/

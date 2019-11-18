@@ -1,5 +1,5 @@
 <?php
-if (!isset($mail)) $mail = "";
+/*if (!isset($mail)) $mail = "";
 if (!isset($nom)) $nom = "";
 if (!isset($prenom)) $prenom = "";
 if (!isset($objet)) $objet = "";
@@ -134,4 +134,4 @@ if (!isset($phone)) $phone = "";
 </div>
 <div class="cleaner">&nbsp;</div>
 <!--/block_content-->
-</div>
+</div>*/

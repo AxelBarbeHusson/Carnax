@@ -1,7 +1,7 @@
 <h1>Rendez-Vous</h1>
 
 <?php
-if (isset($_POST['rendezvous'])) {
+/*if (isset($_POST['rendezvous'])) {
     $mail = isset($_POST['mail']) ? $_POST['mail'] : "";
     $msg = isset($_POST['msg']) ? $_POST['msg'] : "";
     $nom = isset($_POST['USENOM']) ? $_POST['USENOM'] : "";
@@ -60,4 +60,4 @@ if (isset($_POST['rendezvous'])) {
     }
 } else {
     require_once "frmRendezvous.php";
-}
+}*/

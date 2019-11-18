@@ -1,5 +1,5 @@
 <?php
-session_start();
+/*session_start();
 if ($_SESSION['login'] == 1){
     echo "Vous êtes connecté";
 }
@@ -28,4 +28,4 @@ if (in_array($page, $contenu)) {
 } else {
     include_once "includes/accueil.inc.php";
 }
-include_once "includes/footer.inc.php";
+include_once "includes/footer.inc.php";*/

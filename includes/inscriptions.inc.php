@@ -1,6 +1,6 @@
 <h1>Inscription</h1>
 <?php
-if (isset($_POST['inscription'])) {
+/*if (isset($_POST['inscription'])) {
     $login = isset($_POST['login']) ? $_POST['login'] : "";
     $mail = isset($_POST['mail']) ? $_POST['mail'] : "";
     $mdp = isset($_POST['mdp']) ? $_POST['mdp'] : "";
@@ -39,9 +39,9 @@ if (isset($_POST['inscription'])) {
             $sujet = "Validation de votre inscription";
             /*$headers = 'From: manu@elysee.fr' . "\r\n" .
                 'Reply-To: manu@elysee.fr' . "\r\n" .
-                'X-Mailer: PHP/' . phpversion();*/
-            if (mail($mail, $sujet, $msg/*, $headers*/)) {
-                echo "Inscription OK";
+                'X-Mailer: PHP/' . phpversion();
+            if (mail($mail, $sujet, $msg, $headers)) {
+                /*echo "Inscription OK";
             } else {
                 echo "Probleme d'inscription";
             }
@@ -51,4 +51,4 @@ if (isset($_POST['inscription'])) {
     }
 } else {
     require_once "frmInscription.php";
-}
+}/*
