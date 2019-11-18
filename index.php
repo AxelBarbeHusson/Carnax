@@ -1,6 +1,6 @@
 <?php
-/*session_start();
-if ($_SESSION['login'] == 1){
+session_start();
+if (isset($_SESSION['login']) && $_SESSION['login'] == 1 ) {
     echo "Vous êtes connecté";
 }
 else{
@@ -20,7 +20,7 @@ if (isset($_GET['page'])) {
 } else {
     $page = "accueil";
 }
-$path = "includes";
+$path = "includes/";
 $contenu = glob($path . "*.inc.php");
 $page = $path . $page . ".inc.php";
 if (in_array($page, $contenu)) {
@@ -28,4 +28,4 @@ if (in_array($page, $contenu)) {
 } else {
     include_once "includes/accueil.inc.php";
 }
-include_once "includes/footer.inc.php";*/
+include_once "includes/footer.inc.php";

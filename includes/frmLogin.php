@@ -1,5 +1,5 @@
 <?php
-/*if (!isset($pseudo)){
+if (!isset($pseudo)){
     $pseudo ="";
 }
 ?>
@@ -18,4 +18,4 @@
     </div>
     <input type="hidden" name="log" />
 
-</form>*/
+</form>
