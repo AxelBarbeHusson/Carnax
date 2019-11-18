@@ -1,113 +1,41 @@
 <?php
 if (!isset($mail)) $mail = "";
-if (!isset($nom)) $nom = "";
+if (!isset($name)) $name = "";
 if (!isset($prenom)) $prenom = "";
 if (!isset($objet)) $objet = "";
 if (!isset($msg)) $msg = "";
 if (!isset($date)) $date = "";
-if (!isset($postal)) $postal = "";
-if (!isset($vpostal)) $vpostal = "";
-if (!isset($phone)) $phone = "";
 ?>
 <form method="post" action="index.php?page=rendezVous">
-    <div class="encadrement">
-        <fieldset>
-
-            <p class="champsObligatoires">* champs obligatoires </p>
-
-
-            <div class="ligneForm">
-                <label for="lastname">Nom *:</label>
-                <div class="champForm" value="<?$nom?>">
-                    <input class="box" type="text" size="70" name=""
-                           /></div>
-            </div>
-            <div class="separateur"></div>
-            <div class="ligneForm">
-                <label for="firstname">Prénom *:</label>
-                <div class="champForm" value="<?$prenom?>">
-                    <input class="box" type="text" size="70" name=""
-                           /></div>
-            </div>
-            <div class="separateur"></div>
-            <div class="ligneForm">
-                <label for="email">Adresse électronique *:</label>
-                <div class="champForm" value="<?$mail?>>
-                    <input class="box" type="text" size="20" name=""
-                           "/></div>
-            </div>
-            <div class="separateur"></div>
-            <div class="ligneForm">
-                <label for="adresse" >Adresse postale :</label>
-                <div class="champForm" >
-                        <textarea class="box" name="ContentObjectAttribute_data_text_148091" cols="70"
-                                  rows="3"></textarea><!--<input class="box" type="text" name="" >--></div>
-            </div>
-            <div class="separateur_2"></div>
-            <div class="ligneForm">
-                <label for="cp">Code postal :</label>
-                <div class="champForm" value="<?$postal?>">
-                    <input class="box" type="text" size="70" name=""
-                           /></div>
-            </div>
-            <div class="separateur"></div>
-            <div class="ligneForm">
-                <label for="city">Ville :</label>
-                <div class="champForm"  value="<?$vpostal?>">
-                    <input class="box" type="text" size="70" name=""
-                          /></div>
-            </div>
-            <div class="separateur"></div>
-            <div class="ligneForm">
-                <label for="telephone">Téléphone :</label>
-                <div class="champForm" value="<?$phone?>">
-                    <input class="box" type="text" size="70" name="ContentObjectAttribute_ezstring_data_text_148094"
-                           /></div>
-            </div>
-            <div class="separateur"></div>
-            <div class="ligneForm">
-                <label for="date">Date *:</label>
-                <div class="champForm" value="<?$date?>">
-                    <input class="box" type="date" size="20" name=""
-                           /></div>
-            </div>
-
-        </fieldset>
+    <div>
+        <label for="nom">Nom&nbsp;: </label>
+        <input type="text" id="nom" name="nom" value="<?= $name ?>"/>
     </div>
-    <div class="encadrement">
-        <fieldset>
-            <legend>Votre message</legend>
-            <p class="champsObligatoires"> * champs obligatoires </p>
-            <div class="separateur"></div>
-            <div class="ligneForm">
-                <label for="sujet">Sujet *:</label>
-                <div class="champForm" value="<?$objet?>">
-                    <input class="box" type="text" size="70" name=""
-                           />
-                </div>
-            </div>
-
-            <div class="separateur"></div>
-            <div class="ligneForm">
-                <label for="message">Message *:</label>
-                <div class="champForm"value="<?$msg?>">
-                                        <textarea class="box" name="" cols="70"
-                                                  rows="10" ></textarea>
-
-            </div>
-            <div class="separateur"></div>
-              <input class="blue_button" type="submit" value="Envoyer" name=""/>
-            </div>
-        </fieldset>
+    <div>
+        <label for="prenom">Prénom&nbsp;: </label>
+        <input type="text" id="prenom" name="prenom" value="<?= $prenom ?>"/>
     </div>
+    <div>
+        <label for="mail">Mail&nbsp;: </label>
+        <input type="text" id="mail" name="mail" value="<?= $mail ?>"/>
+    </div>
+    <div>
+        <label for="objet">Objet&nbsp;: </label>
+        <input type="text" id="objet" name="objet" value="<?= $objet ?>"/>
+    </div>
+    <div>
+        <label for="msg">Votre message&nbsp;: </label>
+        <?php
+        $clean = trim($msg, "\x00..\x1F");
+        ?>
+        <input type="text" id="msg" name="msg" value="<?= $msg ?>"/>
+    </div>
+    <div>
+        <input type="hidden" id="datetime" name="date" value="<?= $date ?>"/>
+    </div>
+        <div>
+        <input type="reset" value="Effacer"/>
+        <input type="submit" value="Envoyer"/>
+    </div>
+    <input type="hidden" name="Kontact"/>
 </form>
-<!---->
-</div>
-<!--/col1-->
-<div id="col2">
-</div>
-<!--/col2-->
-</div>
-<div class="cleaner">&nbsp;</div>
-<!--/block_content-->
-</div>
