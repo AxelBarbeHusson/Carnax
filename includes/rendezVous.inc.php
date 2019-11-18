@@ -2,6 +2,7 @@
 
 <?php
 if (isset($_POST['rendezVous'])) {
+    die("toto");
     $mail = isset($_POST['mail']) ? $_POST['mail'] : "";
     $msg = isset($_POST['msg']) ? $_POST['msg'] : "";
     $nom = isset($_POST['USENOM']) ? $_POST['USENOM'] : "";
@@ -13,9 +14,11 @@ if (isset($_POST['rendezVous'])) {
     $vpostal = isset($_POST['vpostal']) ? $_POST['vpostal'] : "";
     $USER = isset($_POST['USER']) ? $_POST['USER'] : "";
     $erreurs = array();
+
     if (!filter_var($mail, FILTER_VALIDATE_EMAIL))
         array_push($erreurs, "Veuillez saisir une adresse mail valide.");
     if (count($erreurs) > 0) {
+
         $message = "<ul>";
         $i = 0;
         while ($i < count($erreurs)) {
@@ -24,15 +27,19 @@ if (isset($_POST['rendezVous'])) {
         }
         $message .= "</ul>";
         echo $message;
+
         include "frmRendezvous.php";
-    } else {
+    }
+    else {
         $sql = "SELECT COUNT(*) FROM carnex WHERE USEMAIL='" . $mail . "'";
         $nombreOccurences = $pdo->query($sql)->fetchColumn();
-        if ($nombreOccurences == 0) {
+        if ($nombreOccurences === 0) {
             $sql = "INSERT INTO carnex
                 (USEMAIL, USEMESSAGE, USEOBJET, USENOM, ID_USER ,USEPRENOM, USEDATE, USEPHONE, USEVPOSTAL, USEPOSTAL)
                 VALUES ('" . $mail . "', '" . $msg . "','" . $objet . "','" . $phone . "','" . $vpostal . "','" . $postal . "','" . $nom . "','" . $date . "','" . $prenom . "','" . $USER . "')";
+            die($sql);
             $query = $pdo->prepare($sql);
+
             $query->bindValue('ID_USER', $USER, PDO::PARAM_STR);
             $query->bindValue('USEMAIL', $mail, PDO::PARAM_STR);
             $query->bindValue('USEPRENOM', $prenom, PDO::PARAM_STR);
@@ -58,6 +65,8 @@ if (isset($_POST['rendezVous'])) {
             echo "Vous avez déjà pris contact";
         }
     }
-} else {
+}
+
+else {
     require_once "frmRendezvous.php";
 }

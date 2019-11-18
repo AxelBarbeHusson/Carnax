@@ -4,6 +4,7 @@ if (isset($_POST['inscriptions'])) {
     $login = isset($_POST['login']) ? $_POST['login'] : "";
     $mail = isset($_POST['mail']) ? $_POST['mail'] : "";
     $mdp = isset($_POST['mdp']) ? $_POST['mdp'] : "";
+    die("toto");
     $erreurs = array();
     if (!(mb_strlen($login) >= 2 && ctype_alpha($login)))
         array_push($erreurs, "Veuillez saisir votre login.");
@@ -37,10 +38,10 @@ if (isset($_POST['inscriptions'])) {
             $query->execute();
             $msg = "Inscription OK";
             $sujet = "Validation de votre inscription";
-            $headers = 'From: manu@elysee.fr' . "\r\n" .
+            /*$headers = 'From: manu@elysee.fr' . "\r\n" .
                 'Reply-To: manu@elysee.fr' . "\r\n" .
-                'X-Mailer: PHP/' . phpversion();
-            if (mail($mail, $sujet, $msg, $headers)) {
+                'X-Mailer: PHP/' . phpversion();*/
+            if (mail($mail, $sujet, $msg)) {
                 echo "Inscription OK";
             } else {
                 echo "Probleme d'inscription";
