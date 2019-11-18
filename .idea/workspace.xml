@@ -28,11 +28,13 @@
   <component name="ProjectId" id="1TBnSRVkB0cKaVMMgtvtQaoPqe7" />
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/xampp/htdocs/test" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -59,8 +61,17 @@
       <workItem from="1572958185605" duration="7656000" />
       <workItem from="1573123606331" duration="4195000" />
       <workItem from="1573649450731" duration="595000" />
-      <workItem from="1574064505927" duration="7744000" />
+      <workItem from="1574064505927" duration="4080000" />
+      <workItem from="1574074800070" duration="7193000" />
     </task>
+    <task id="LOCAL-00001" summary="ajout du .gitignore">
+      <created>1574075026874</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574075026874</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -78,5 +89,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ajout du .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout du .gitignore" />
   </component>
 </project>
