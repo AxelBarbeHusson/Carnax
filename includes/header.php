@@ -19,6 +19,7 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == 1) {
                 <li><a href="index.php?page=rendezVous" title="">Rendez-vous</a></li>
                 <li><a href="index.php?page=etatvaccins" title="">Etat Vaccins</a></li>
                 <li><a href="index.php?page=vaccinspourvoyage" title="">Vaccins pour voyages</a></li>
+                <li><a href="index.php?page=test" title="">Test</a></li>
                 <li><a href="index.php?page=inscriptions" title="">Inscriptions</a></li>
 
                 <a target="_blank" href="https://solidarites-sante.gouv.fr/IMG/pdf/calendrier_vaccinal_maj_17avril2019.pdf">Liens vaccins.</a>

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="476e2450-c33e-4a22-b028-88658db43ea3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/img/social-icons.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,6 +32,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../exercice" />
@@ -62,7 +64,7 @@
       <workItem from="1573123606331" duration="4195000" />
       <workItem from="1573649450731" duration="595000" />
       <workItem from="1574064505927" duration="4080000" />
-      <workItem from="1574074800070" duration="7193000" />
+      <workItem from="1574074800070" duration="8860000" />
     </task>
     <task id="LOCAL-00001" summary="ajout du .gitignore">
       <created>1574075026874</created>
@@ -71,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574075026874</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Edit, le footer d'avant n'est en fait pas le footer.&#10;Float de la présentation de l'équipe à droite de la navbar&#10;Ajout du footer">
+      <created>1574088290514</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574088290514</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,6 +101,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ajout du .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout du .gitignore" />
+    <MESSAGE value="Edit, le footer d'avant n'est en fait pas le footer.&#10;Float de la présentation de l'équipe à droite de la navbar&#10;Ajout du footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit, le footer d'avant n'est en fait pas le footer.&#10;Float de la présentation de l'équipe à droite de la navbar&#10;Ajout du footer" />
   </component>
 </project>
