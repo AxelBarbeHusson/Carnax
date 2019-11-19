@@ -16,6 +16,7 @@ header{
 .page-header{
     background-color: #A6D2CD;
     width: 100%
+
 }
 
 h1 {
@@ -28,7 +29,11 @@ h1 {
   padding-top: 30px;
   padding-bottom: 30px;
   border-radius: 15px;
+
+
 }
+
+
 
 #logo {
   width: 120px;
@@ -142,8 +147,8 @@ body {
 #equipe{
   color: #FFF;
   background-color: #309488;
-  margin-right: 25px;
-  width: 75%;
+  margin-top: 5px;
+  width: 78%;
   height: 400px;
   float: right;
   border-radius: 15px;
@@ -173,8 +178,9 @@ body {
   background-color: #309488;
   border-radius: 15px;
   float: right;
-  width:75%;
-  margin-right: 25px;
+  width:78%;
+  margin-top: -22px;
+
 }
 .page-footer a {
   color: #fff;
@@ -249,7 +255,7 @@ body {
 }
 .bottom-bar {
   background-color: #309488;
-  padding-top: 30px;
+  padding-top: 20px;
   line-height: 3em;
 }
 .copyright {
