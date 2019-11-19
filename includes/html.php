@@ -7,4 +7,6 @@
     <title>Carnax</title>
 
     <link href="../assets/css/style.css" rel="stylesheet">
+    <script src="../assets/js/datamaps.world.min.js"></script>
+    <script src="../assets/js/map.js"></script>
 </head>
