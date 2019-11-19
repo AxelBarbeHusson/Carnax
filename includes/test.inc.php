@@ -1,7 +1,9 @@
 <h1>Test</h1>
 
 <?php
+
 if (isset($_POST['test'])) {
+
     $mail = isset($_POST['mail']) ? $_POST['mail'] : "";
     $msg = isset($_POST['msg']) ? $_POST['msg'] : "";
     $nom = isset($_POST['nom']) ? $_POST['nom'] : "";
