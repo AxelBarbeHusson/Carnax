@@ -37,7 +37,6 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == 1) {
                     echo "<li class=\"nav-item\"><a href=\"index.php?page=rendezvous\" class=\"nav-link js-scroll-trigger\">Rendez-vous</a></li>";
                     echo "<li class=\"nav-item\"><a href=\"index.php?page=logout\" class=\"nav-link js-scroll-trigger\">Logout</a></li>";
                 } else {
-                    echo "<li class=\"nav-item\"><a href=\"index.php?page=login\" class=\"nav-link js-scroll-trigger\">Connexion</a></li>";
                     if (isset($_POST['inscr'])) {
                         $mail = isset($_POST['mail']) ? $_POST['mail'] : "";
                         $sql = "SELECT COUNT(*) FROM carnaxadmin WHERE MailAdmin='" . $mail . "'";
@@ -77,7 +76,7 @@ if (isset($_POST['barnabe'])) {
         $_SESSION['prenom'] = $result['USEPRENOM'];
         $hash = $result['USEPASSWORD'];
         if (password_verify($mdp, $hash)) {
-            $_SESSION['login'] = 1;
+            $_SESSION['login'] == 1;
             $redirection = "<script>document.location.href='http://localhost/carnex'</script>";
             echo "Vous êtes maintenant connecté";
         } else {
@@ -134,3 +133,4 @@ if (!isset($mdp)) $mdp = "";
     </div>
 
 </header>
+<div>
