@@ -1,15 +1,22 @@
-<h1>Rendez-Vous</h1>
+<h1>Test</h1>
 
 <?php
-if (isset($_POST['Kontact'])) {
-    $mail = isset($_POST['mail']) ? $_POST['mail'] : "";
-    $msg = isset($_POST['msg']) ? $_POST['msg'] : "";
-    $nom = isset($_POST['nom']) ? $_POST['nom'] : "";
-    $prenom  = isset($_POST['prenom']) ? $_POST['prenom'] : "";
-    $objet = isset($_POST['objet']) ? $_POST['objet'] : "";
-    $date = isset($_POST['date']) ? $_POST['date'] : "";
-    $USER = isset($_POST['USER']) ? $_POST['USER'] : "";
-    $erreurs = array();
+$success = false;
+$erreurs = array();
+if (isset($_POST['rdv'])) {
+
+    $mail = isset($_POST['mail']) ? clean($_POST['mail']) : "";
+    $msg = isset($_POST['msg']) ? clean($_POST['msg']) : "";
+    $nom = isset($_POST['nom']) ? clean($_POST['nom']) : "";
+    $prenom  = isset($_POST['prenom']) ? clean($_POST['prenom']) : "";
+    $sujet = isset($_POST['sujet']) ? clean($_POST['sujet']) : "";
+    $apostal = isset($_POST['apostal']) ? clean($_POST['apostal']) : "";
+    $cpostal = isset($_POST['cpostal']) ? clean($_POST['cpostal']) : "";
+    $ville = isset($_POST['ville']) ? clean($_POST['ville']) : "";
+    $phone = isset($_POST['phone']) ? clean($_POST['phone']) : "";
+    $date = isset($_POST['date']) ? clean($_POST['date']) : "";
+    $USER = isset($_POST['USER']) ? clean($_POST['USER']) : "";
+
     if (!filter_var($mail, FILTER_VALIDATE_EMAIL))
         array_push($erreurs, "Veuillez saisir une adresse mail valide.");
     if (!(mb_strlen($nom) >= 2 && ctype_alpha($nom)))
@@ -27,25 +34,29 @@ if (isset($_POST['Kontact'])) {
         echo $message;
         include "frmRendezvous.php";
     } else {
-        $sql = "SELECT COUNT(*) FROM t_carnex WHERE USEMAIL='" . $mail . "'";
+        $sql = "SELECT COUNT(*) FROM t_test WHERE USEMAIL='" . $mail . "'";
         $nombreOccurences = $pdo->query($sql)->fetchColumn();
         if ($nombreOccurences == 0) {
-            $sql = "INSERT INTO t_carnex
-                (USEMAIL, USEMESSAGE, USEOBJET, USENOM, ID_USER ,USEPRENOM, USEDATE)
-                VALUES ('" . $mail . "', '" . $msg . "','" . $objet . "','" . $nom . "','" . $USER . "','" . $prenom  . "','" . $date . "')";
+            $sql = "INSERT INTO t_test
+                (USEMAIL, USEMESSAGE, USESUJET, USENOM, ID_USER , USEPRENOM, USEAPOSTAL, USECPOSTAL, USEVILLE, USEPHONE, USEDATE)
+                VALUES ('" . $mail . "', '" . $msg . "','" . $sujet . "','" . $nom . "','" . $USER . "','" . $prenom  . "','" . $apostal . "','" . $cpostal . "','" . $ville . "','" . $phone . "','" . $date . "')";
             $query = $pdo->prepare($sql);
             $query->bindValue('ID_USER', $USER, PDO::PARAM_STR);
             $query->bindValue('USEMAIL', $mail, PDO::PARAM_STR);
             $query->bindValue('USEPRENOM', $prenom , PDO::PARAM_STR);
             $query->bindValue('USENOM', $nom, PDO::PARAM_STR);
             $query->bindValue('USEMESSAGE', $msg, PDO::PARAM_STR);
+            $query->bindValue('USESUJET', $sujet, PDO::PARAM_STR);
+            $query->bindValue('USEAPOSTAL', $apostal, PDO::PARAM_STR);
+            $query->bindValue('USECPOSTAL', $cpostal, PDO::PARAM_STR);
+            $query->bindValue('USEVILLE', $ville, PDO::PARAM_STR);
+            $query->bindValue('USEPHONE', $phone, PDO::PARAM_STR);
             $query->bindValue('USEDATE', $date, PDO::PARAM_STR);
-            $query->bindValue('USEOBJET', $objet, PDO::PARAM_STR);
             $query->execute();
             $message = "Contact pris";
             $sujet = "Validation de votre message";
             $to = 'personne@example.com';
-            $subject = $objet;
+            $subject = $sujet;
             $message = $msg;
             $headers = 'From:' . $mail . "\r\n" .
                 'Reply-To:' . $mail . "\r\n" .

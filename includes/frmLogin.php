@@ -1,21 +1,18 @@
 <?php
-if (!isset($pseudo)){
-    $pseudo ="";
-}
+if (!isset($mail)) $mail = "";
 ?>
-
 <form method="post" action="index.php?page=login">
     <div>
-        <label for="pseudo">login: </label>
-        <input type="text" id="pseudo" name="pseudo" value="<?=$pseudo?>" />
+        <label for="mail">Mail&nbsp;: </label>
+        <input type="text" id="mail" name="mail" value="<?= $mail ?>"/>
     </div>
     <div>
-        <label for="mdp">Mot de passe: </label>
-        <input type="password" id="mdp" name="mdp" />
+        <label for="mdp">Mot de passe&nbsp;: </label>
+        <input type="password" id="mdp" name="mdp"/>
     </div>
     <div>
-        <input type="submit" value="Valider" />
+        <input type="reset" value="Effacer"/>
+        <input type="submit" value="Envoyer"/>
     </div>
-    <input type="hidden" name="log" />
-
+    <input type="hidden" name="barnabe"/>
 </form>
