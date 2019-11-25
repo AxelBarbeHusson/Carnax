@@ -34,7 +34,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../exercice" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -82,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574088290514</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="bougeage de blocs">
+      <created>1574177985446</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1574177985446</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +111,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ajout du .gitignore" />
     <MESSAGE value="Edit, le footer d'avant n'est en fait pas le footer.&#10;Float de la présentation de l'équipe à droite de la navbar&#10;Ajout du footer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit, le footer d'avant n'est en fait pas le footer.&#10;Float de la présentation de l'équipe à droite de la navbar&#10;Ajout du footer" />
+    <MESSAGE value="bougeage de blocs" />
+    <option name="LAST_COMMIT_MESSAGE" value="bougeage de blocs" />
   </component>
 </project>
