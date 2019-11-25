@@ -69,4 +69,3 @@ $date = date('Y');
 <script src="assets/js/pluie.js" type="text/javascript"></script>
 </body>
 </html>
-
