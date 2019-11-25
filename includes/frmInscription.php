@@ -2,6 +2,8 @@
 if (!isset($nom)) $nom = "";
 if (!isset($prenom)) $prenom = "";
 if (!isset($mail)) $mail = "";
+if (!isset($role)) $role = "";
+
 ?>
 <form method="post" action="index.php?page=inscriptions">
     <div>
@@ -19,6 +21,9 @@ if (!isset($mail)) $mail = "";
     <div>
         <label for="mdp">Mot de passe&nbsp;: </label>
         <input type="password" id="mdp" name="mdp"/>
+    </div>
+    <div>
+        <input type="hidden"  value="<?php $role = 'Users'?>">
     </div>
     <div>
         <input type="reset" value="Effacer"/>
