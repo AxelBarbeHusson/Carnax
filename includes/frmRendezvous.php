@@ -1,41 +1,66 @@
 <?php
 if (!isset($mail)) $mail = "";
 if (!isset($nom)) $nom = "";
-if (!isset($prenom )) $prenom = "";
-if (!isset($objet)) $objet = "";
-if (!isset($msg)) $msg = "";
+if (!isset($prenom)) $prenom = "";
+if (!isset($sujet)) $sujet = "";
+if (!isset($apostal)) $apostal = "";
+if (!isset($cpostal)) $cpostal = "";
+if (!isset($ville)) $ville = "";
+if (!isset($phone)) $phone = "";
 if (!isset($date)) $date = "";
+if (!isset($msg)) $msg = "";
 ?>
+
 <form method="post" action="index.php?page=rendezVous">
-    <div>
-        <label for="nom">Nom&nbsp;: </label>
-        <input type="text" id="nom" name="nom" value="<?= $nom ?>"/>
-    </div>
-    <div>
-        <label for="prenom">Prénom&nbsp;: </label>
-        <input type="text" id="prenom" name="prenom" value="<?= $prenom ?>"/>
-    </div>
-    <div>
-        <label for="mail">Mail&nbsp;: </label>
-        <input type="text" id="mail" name="mail" value="<?= $mail ?>"/>
-    </div>
-    <div>
-        <label for="objet">Objet&nbsp;: </label>
-        <input type="text" id="objet" name="objet" value="<?= $objet ?>"/>
-    </div>
-    <div>
-        <label for="msg">Votre message&nbsp;: </label>
-        <?php
-        $clean = trim($msg, "\x00..\x1F");
-        ?>
-        <input type="text" id="msg" name="msg" value="<?= $msg ?>"/>
-    </div>
-    <div>
-        <input type="hidden" id="datetime" name="date" value="<?= $date ?>"/>
-    </div>
+    <fieldset>
         <div>
-        <input type="reset" value="Effacer"/>
-        <input type="submit" value="Envoyer"/>
-    </div>
-    <input type="hidden" name="Kontact"/>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" value="<?= $nom ?>"/>
+        </div>
+        <div>
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" value="<?= $prenom ?>"/>
+        </div>
+        <div>
+            <label for="mail">Adresse électronique :</label>
+            <input type="email" id="mail" name="mail" value="<?= $mail ?>"/>
+        </div>
+        <div>
+            <label for="apostal">Adresse postale :</label>
+            <textarea id="apostal" name="apostal" value="<?= $apostal ?>">Votre adresse postal</textarea>
+        </div>
+        <div>
+            <label for="cpostal">Code postal :</label>
+            <input class="box" type="text" name="cpostal" id="cpostal" value="<?= $cpostal ?>"/>
+        </div>
+        <div>
+            <label for="ville">Ville :</label>
+            <input type="text" name="ville" id="ville" value="<?= $ville ?>"/>
+        </div>
+        <div>
+            <label for="phone">Téléphone :</label>
+            <input type="tel" name="phone" id="phone" value="<?= $phone ?>"/>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <div>
+            <label for="sujet">Sujet :</label>
+            <input type="text" id="sujet" name="sujet" value="<?= $sujet ?>"/>
+        </div>
+        <div>
+            <label for="date">Date :</label>
+            <input type="date" id="date" name="date" value="<?= $date ?>"/>
+        </div>
+        <div>
+            <label for="msg">Message :</label>
+            <textarea id="msg" name="msg" value="<?= $msg ?>">Votre message</textarea>
+
+        </div>
+        <div>
+            <input class="blue_button" type="submit" value="Envoyer"/>
+            <input class="blue_button" type="reset" value="Effacer"/>
+        </div>
+    </fieldset>
+    <input type="hidden" name="rdv"/>
 </form>

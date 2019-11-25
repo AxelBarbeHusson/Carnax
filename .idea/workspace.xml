@@ -34,7 +34,11 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../PHP" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../exercice" />
+>>>>>>> aa82a06f00908d607625d2db09c3767b1633ca22
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RunDashboard">

@@ -1,10 +1,10 @@
 <h1>Inscription</h1>
 <?php
 if (isset($_POST['maurice'])) {
-    $nom = isset($_POST['nom']) ? $_POST['nom'] : "";
-    $prenom = isset($_POST['prenom']) ? $_POST['prenom'] : "";
-    $mail = isset($_POST['mail']) ? $_POST['mail'] : "";
-    $mdp = isset($_POST['mdp']) ? $_POST['mdp'] : "";
+    $nom = isset($_POST['nom']) ? clean($_POST['nom']) : "";
+    $prenom = isset($_POST['prenom']) ? clean($_POST['prenom']) : "";
+    $mail = isset($_POST['mail']) ? clean($_POST['mail']) : "";
+    $mdp = isset($_POST['mdp']) ? clean($_POST['mdp']) : "";
     $erreurs = array();
     if (!(mb_strlen($nom) >= 2 && ctype_alpha($nom)))
         array_push($erreurs, "Veuillez saisir un nom correct.");

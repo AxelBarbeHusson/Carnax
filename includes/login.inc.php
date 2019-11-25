@@ -1,50 +1,41 @@
-<h1>Connexion</h1>
+<h1>Login</h1>
 <?php
-if (isset($_POST['log'])) {
-    if (isset($_POST['pseudo'])) {
-        $pseudo = $_POST['pseudo'];
-    } else {
-        $pseudo = "";
-    }
-    if (isset($_POST['mdp'])) {
-        $mdp = $_POST['mdp'];
-    } else {
-        $mdp = "";
-    }
-    $erreur = array();
-    if (mb_strlen($pseudo) < 2 && ctype_alpha($pseudo)){
-        array_push($erreur, "Veuillez saisir votre login.");
-        debug($mdp);
-    }
-    if (mb_strlen($mdp) < 6){
-        array_push($erreur, "Votre mot de passe doit comporter au minimum 6 caractères");
-    }
-    if (count($erreur) >0){
-        $msg = "<ul>";
+if (isset($_POST['barnabe'])) {
+    $mail = isset($_POST['mail']) ? $_POST['mail'] : "";
+    $mdp = isset($_POST['mdp']) ? $_POST['mdp'] : "";
+    $erreurs = array();
+    if (!filter_var($mail, FILTER_VALIDATE_EMAIL))
+        array_push($erreurs, "Veuillez saisir une adresse mail valide.");
+    if (mb_strlen($mdp) < 6)
+        array_push($erreurs, "Votre mot de passe doit comporter 6 caractères minimum");
+    if (count($erreurs) > 0) {
+        $message = "<ul>";
         $i = 0;
-        while($i < count($erreur)){
-            $msg .= "<li>" . $erreur[$i] . "</li>";
+        while ($i < count($erreurs)) {
+            $message .= "<li>" . $erreurs[$i] . "</li>";
             $i++;
         }
-        $msg .= "</ul>";
-        echo $msg;
+        $message .= "</ul>";
+        echo $message;
         include "frmLogin.php";
     } else {
-        echo "Test matching Log/mdp</br>";
-        $getDatas =  "SELECT * FROM carnexadmin WHERE LoginAdmin ='" . $pseudo . "'";
+        echo "Test matching login/password";
+        $getDatas = "SELECT * FROM t_users WHERE USEMAIL='" . $mail . "'";
         $result = $pdo->query($getDatas)->fetch(PDO::FETCH_ASSOC);
-        $_SESSION['pseudo'] = $result['LoginAdmin'];
-        $hash = $result['PasswordAdmin'];
+        $_SESSION['nom'] = $result['USENOM'];
+        $_SESSION['prenom'] = $result['USEPRENOM'];
+        $hash = $result['USEPASSWORD'];
         if (password_verify($mdp, $hash)) {
             $_SESSION['login'] = 1;
-            //debug($_SESSION['login']);
             $redirection = "<script>document.location.href='http://localhost/carnex'</script>";
-            echo $redirection;
+            echo "Vous êtes maintenant connecté";
         } else {
-            echo "Le login et le mot de passe ne correspondent pas";
+            echo "L'adresse et le mot de passe ne correspondent pas !";
         }
+        /*$mdp = password_verify($mdp, $hash);
+        $sql = "SELECT COUNT(*) FROM t_users WHERE USEMAIL='". $mail . "' AND USEPASSWORD ='" . $mdp . "''";
+        $nombreOccurences = $pdo->query($sql)->fetchColumn();*/
     }
 } else {
     require_once "frmLogin.php";
 }
-

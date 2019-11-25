@@ -7,4 +7,5 @@
     <title>Carnax</title>
 
     <link href="../assets/css/style.css" rel="stylesheet">
+
 </head>
