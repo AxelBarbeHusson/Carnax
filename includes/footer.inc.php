@@ -62,8 +62,11 @@ $date = date('Y');
 
     </div>
 </footer>
-<script src="./assets/js/jquery.js" type="text/javascript"></script>
-<script src="./assets/js/bootstrap.js" type="text/javascript"></script>
+<script src="assets/js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var macouleur="lime"
+</script>
+<script src="assets/js/pluie.js" type="text/javascript"></script>
 </body>
 </html>
 
