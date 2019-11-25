@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+<head class="head">
     <meta charset="utf-8">
-    <meta name="description" content="Projet carnet de vacinations en ligne">
-    <meta name="author" content="Carnex">
     <title>Carnax</title>
-
-    <link href="../assets/css/style.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="./assets/css/style.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:300,400,500,600,700,800&display=swap" rel="stylesheet">
 
 </head>
