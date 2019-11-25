@@ -1,20 +1,14 @@
 @import "reset.css";
 
 .wrap {
-  max-width: 1250px;
+  max-width: 1000px;
   width:100%;
   margin: 0 auto;
 }
 
-.headhead{
-    background-color: yellow;
-}
 
-header{
-    background-color: brown;
-}
 .page-header{
-    background-color: #A6D2CD;
+
     width: 100%
 
 }
@@ -24,8 +18,8 @@ h1 {
   text-align: center;
   color: #fff;
   background-color:#309488;
-  background: linear-gradient( to right, #309488, 65%, #c1eead);
-  margin-top: 20px;
+  background: linear-gradient( to right, #309488, 70%, #fff);
+  margin-top: 25px;
   padding-top: 30px;
   padding-bottom: 30px;
   border-radius: 15px;
@@ -46,52 +40,46 @@ h1 {
 
 body {
   font-family: 'Mukta Malar', sans-serif;
-  background-color: #A6D2CD;
+  background-color: gainsboro;
 }
 
-.navbar {
-  margin: 0;
-  padding: 0;
-  margin-top: 5px;
-  width: 250px;
-  background-color: #309488;
-  background: linear-gradient( #309488, 70%, #c1eead);
+
+header nav ul li a {
   float: left;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-  border-radius: 15px;
-
-}
-
-.navbar a {
-  display: block;
-  color: #fff;
-  padding-top: 30px;
-  padding-left: 20px;
-  text-decoration: none;
-  font-size: 1.4em;
-}
-.log-button {
-  background-color: #9794b5;
-  border-radius: 10px;
-  color: #c1eead;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: none;
-  cursor: pointer;
-  width: 100px;
+  padding: 10px 0 10px 0;
+  color: white;
   font-size: 1em;
-  margin-top: 260px;
-  margin-left: 15px;
+  width: 15%;
+  background-color: darkseagreen;
+  text-decoration: none;
+  margin: 20px 9.5px 20px 0;
+  border-radius: 10px;
+  max-width: 100%;
+  }
+
+  header nav ul li a:hover {
+    background-color: lime;
+  }
+
+header nav ul li .log-button {
+  float: left;
+  text-align: center;
+  padding: 10px 0 10px 0;
+  color: white;
+  font-size: 1em;
+  width: 9%;
+  background-color: #9794B5;
+  text-decoration: none;
+  margin: 20px 9.5px 20px 0;
+  border-radius: 10px;
+  max-width: 100%;
+  }
 }
 
 .log-button:hover {
   background-color: purple;
 }
-
-
 
 .form-popup {
   display: none;
@@ -145,11 +133,12 @@ body {
 }
 
 #equipe{
-  color: #FFF;
-  background-color: #309488;
-  margin-top: 5px;
-  width: 78%;
-  height: 400px;
+  color: #fff;
+  background-color: silver;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: px;
   float: right;
   border-radius: 15px;
 }
@@ -157,36 +146,41 @@ body {
   float: left;
   width: 25%;
   padding-top: 50px;
-  color: #FFF;
+  color: #309488;
   /*transition: all 0.5s;*/
   text-align: center;
   /*overflow: auto;*/
+
+}
+
+#equipe .section1 img {
+  width: 200px;
+  height: 300px;
+  border-radius: 15px;
 }
 #equipe h2 {
   text-align: center;
   text-transform: uppercase;
   padding-top: 30px;
 }
-.spacer {
-  height: 450px;
-}
+
 .page-footer {
-  position: relative;
   color: #fff;
   font-size: .75em;
-  padding-top: 30px;
+  padding-top: px;
   background-color: #309488;
+  background: linear-gradient( to right, #309488, 70%, #fff);
   border-radius: 15px;
   float: right;
-  width:78%;
-  margin-top: -22px;
+  width:100%;
+  margin-top: px;
 
 }
 .page-footer a {
-  color: #fff;
+  color: #309488;
 }
 .page-footer a:hover {
-  background-color: #309488;
+  background-color: gainsboro;
 }
 .columns {
   margin-left: -3%;
@@ -255,6 +249,7 @@ body {
 }
 .bottom-bar {
   background-color: #309488;
+  background: linear-gradient( to right, #309488, 70%, #fff);
   padding-top: 20px;
   line-height: 3em;
 }
@@ -269,4 +264,3 @@ body {
 .footernav li {
   display: inline-block;
 }
-
