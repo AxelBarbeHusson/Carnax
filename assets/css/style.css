@@ -14,11 +14,12 @@
 }
 
 h1 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 3.5em;
   text-align: center;
   color: #fff;
   background-color:#309488;
-  background: linear-gradient( to right, #309488, 70%, #fff);
+  background: linear-gradient( to top, #309488, 70%, #c1eead);
   margin-top: 25px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -39,8 +40,8 @@ h1 {
 
 
 body {
-  font-family: 'Mukta Malar', sans-serif;
-  background-color: gainsboro;
+font-family: 'Mukta+Malar', sans-serif;
+  background-color: #a6d2cd;
 }
 
 
@@ -51,7 +52,7 @@ header nav ul li a {
   color: white;
   font-size: 1em;
   width: 15%;
-  background-color: darkseagreen;
+  background-color: darkseagreen;background: linear-gradient( to top, #309488, 50%, #c1eead);
   text-decoration: none;
   margin: 20px 9.5px 20px 0;
   border-radius: 10px;
@@ -74,7 +75,7 @@ header nav ul li .log-button {
   margin: 20px 9.5px 20px 0;
   border-radius: 10px;
   max-width: 100%;
-  }
+  border:none;
 }
 
 .log-button:hover {
@@ -134,7 +135,7 @@ header nav ul li .log-button {
 
 #equipe{
   color: #fff;
-  background-color: silver;
+  background-color: gainsboro;
   margin-top: 10px;
   margin-bottom: 20px;
   width: 100%;
@@ -169,7 +170,7 @@ header nav ul li .log-button {
   font-size: .75em;
   padding-top: px;
   background-color: #309488;
-  background: linear-gradient( to right, #309488, 70%, #fff);
+  background: linear-gradient( to right, #309488, 70%, #c1eead);
   border-radius: 15px;
   float: right;
   width:100%;
@@ -247,12 +248,7 @@ header nav ul li .log-button {
 .column .post-list li a {
   font-size: .85em;
 }
-.bottom-bar {
-  background-color: #309488;
-  background: linear-gradient( to right, #309488, 70%, #fff);
-  padding-top: 20px;
-  line-height: 3em;
-}
+
 .copyright {
   float:left;
   margin-right: 35%;
