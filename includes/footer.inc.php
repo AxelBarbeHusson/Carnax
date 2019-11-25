@@ -2,6 +2,9 @@
 $date = date('Y');
 ?>
 </div>
+<div class="clear">
+
+</div>
 <footer class="page-footer">
     <div class="wrap">
 
