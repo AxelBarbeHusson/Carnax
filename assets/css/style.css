@@ -117,7 +117,7 @@ img#imagemed {
 .form-wrap .cancel {
   background-color: red;
 }
-
+/**/
 /* hover effect sur les boutons */
 .form-wrap .btn:hover, .log-button:hover {
   opacity: 1;
