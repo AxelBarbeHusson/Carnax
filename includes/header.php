@@ -11,11 +11,23 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == 1) {
 
 <header class="page-header">
     <div class="wrap">
-        <div class="linear-gradient">
-            <h1>Les Vaccins du Bonheur</h1>
-        </div>
+      <div class="log">
         <img id="logo" src="assets/img/logov2.png" alt="logo">
+        <h4 id="titre">Carnax<br>Les vaccins connectés</h4>
+      </div>
+      <div class="icones">
+        <div class="">
+          <img src="assets/img/tel.png" alt="">
+          <p>Téléphone: 02 35 63 14 14</p>
+        </div>
+        <div class="">
+          <img src="assets/img/iconemail.png" alt="">
+          <p>E Mail: carnax@outlook.com</p>
+        </div>
 
+      </div>
+    </div>
+      <div class="clear"></div>
 
         <nav>
             <ul class="nav navbar">
@@ -23,13 +35,15 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == 1) {
                 <li><a href="index.php?page=rendezVous" title="">Rendez-vous</a></li>
                 <li><a href="index.php?page=etatvaccins" title="">Etat Vaccins</a></li>
                 <li><a href="index.php?page=vaccinspourvoyage" title="">Vaccins pour voyages</a></li>
-                <a target="_blank"
+                <li><a target="_blank"
                    href="https://solidarites-sante.gouv.fr/IMG/pdf/calendrier_vaccinal_maj_17avril2019.pdf">Liens
-                    vaccins</a>
-                <button class="log-button login" onclick="popupButton()">Login</button>
-                <button class="log-button register"><a href="index.php?page=inscriptions">Inscription</a></button>
-            </ul>
+                    vaccins</a></li>
+                <li><a href="">inscription</a></li>
+                <li><a href="">connexion</a></li>
+              </ul>
+
         </nav>
+
         <?php
         if (isset($_SESSION['login']) && $_SESSION['login'] == 1) {
             echo "<li class=\"nav-item\"><a href=\"index.php?page=rendezvous\" class=\"nav-link js-scroll-trigger\">Rendez-vous</a></li>";
@@ -44,7 +58,7 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == 1) {
             }
         }
         ?>
-    </div>
+
 
     <div class="clear"></div>
     <?php
@@ -130,6 +144,11 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == 1) {
     </div>
     </section>
     </div>
+
+    <section >
+      <img id="imagemed" src="assets/img/medimg.jpg" alt="">
+
+    </section>
 
 </header>
 <div>

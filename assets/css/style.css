@@ -1,85 +1,73 @@
 @import "reset.css";
 
-.wrap {
-  max-width: 1000px;
-  width:100%;
-  margin: 0 auto;
-}
 
 
-.page-header{
 
-    width: 100%
-
-}
-
-h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3.5em;
-  text-align: center;
-  color: #fff;
-  background-color:#309488;
-  background: linear-gradient( to top, #309488, 70%, #c1eead);
-  margin-top: 25px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  border-radius: 15px;
-
-
-}
-
-
+.page-header .wrap {
+    max-width: 1350px;
+    width:100%;
+    margin: 0 auto;
+    background-color: #fff;
+  }
 
 #logo {
-  width: 120px;
-  height: 120px;
-  margin-top: -150px;
-  padding-bottom: 10px;
+  width: 100px;
+  height: 100px;
+
 }
 
-
+h4#titre {
+  float: left;
+  padding-top: 50px;
+}
 
 body {
 font-family: 'Mukta+Malar', sans-serif;
-  background-color: #a6d2cd;
+  background-color: #fff;
 }
-
 
 header nav ul li a {
   float: left;
   text-align: center;
-  padding: 10px 0 10px 0;
   color: white;
   font-size: 1em;
-  width: 15%;
-  background-color: darkseagreen;background: linear-gradient( to top, #309488, 50%, #c1eead);
+  background-color: darkslateblue;
   text-decoration: none;
-  margin: 20px 9.5px 20px 0;
-  border-radius: 10px;
-  max-width: 100%;
+  padding:10px 10px 10px 10px;
+  display: block;
+  width: 14.285%;
   }
 
   header nav ul li a:hover {
     background-color: lime;
   }
 
-header nav ul li .log-button {
-  float: left;
-  text-align: center;
-  padding: 10px 0 10px 0;
-  color: white;
-  font-size: 1em;
-  width: 9%;
-  background-color: #9794B5;
-  text-decoration: none;
-  margin: 20px 9.5px 20px 0;
-  border-radius: 10px;
-  max-width: 100%;
-  border:none;
+header .icones img {
+  width: 50px;
+  height: 50px;
+
+}
+header .icones p {
+
 }
 
-.log-button:hover {
-  background-color: purple;
+header .icones {
+  padding-top: 20px;
+}
+.log {
+  float: left;
+}
+.log #logo {
+  float: left;
+}
+.icones {
+  float: right;
+}
+
+.icones div {float: left;}
+img#imagemed {
+  width: 1520px;
+  height: 900px;
 }
 
 .form-popup {
@@ -134,12 +122,11 @@ header nav ul li .log-button {
 }
 
 #equipe{
-  color: #fff;
-  background-color: gainsboro;
+  color: #000;
+  background-color: #fff;
   margin-top: 10px;
   margin-bottom: 20px;
   width: 100%;
-  height: px;
   float: right;
   border-radius: 15px;
 }
