@@ -5,6 +5,8 @@ if (isset($_POST['maurice'])) {
     $prenom = isset($_POST['prenom']) ? clean($_POST['prenom']) : "";
     $mail = isset($_POST['mail']) ? clean($_POST['mail']) : "";
     $mdp = isset($_POST['mdp']) ? clean($_POST['mdp']) : "";
+    $role = isset($_POST['role']) ? clean($_POST['role']) : "";
+
     $erreurs = array();
     if (!(mb_strlen($nom) >= 2 && ctype_alpha($nom)))
         array_push($erreurs, "Veuillez saisir un nom correct.");
@@ -30,8 +32,9 @@ if (isset($_POST['maurice'])) {
         if ($nombreOccurences == 0) {
             $mdp = password_hash($mdp, PASSWORD_DEFAULT);
             $sql = "INSERT INTO t_users
-                (USENOM, USEPRENOM, USEMAIL, USEPASSWORD)
-                VALUES ('" . $nom . "', '" . $prenom . "', '" . $mail . "', '" . $mdp . "')";
+                (USENOM, USEPRENOM, USEMAIL, USEPASSWORD,role)
+                VALUES ('" . $nom . "', '" . $prenom . "', '" . $mail . "', '" . $mdp . "', '" . $role . "')";
+            $role = 'Users';
             $query = $pdo->prepare($sql);
             $query->bindValue('USENOM', $nom, PDO::PARAM_STR);
             $query->bindValue('USEPRENOM', $prenom, PDO::PARAM_STR);

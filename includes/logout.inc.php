@@ -1,4 +1,5 @@
 <?php
-$_SESSION['login'] = 0;
+$_SESSION['login'];
 session_destroy();
-echo "<script>document.location.href='http://localhost/carnex'</script>";
+//echo "<script>document.location.href='http://localhost/carnex'</script>";
+header('Location: index.php');
