@@ -2,6 +2,9 @@
 $date = date('Y');
 ?>
 </div>
+<div class="clear">
+
+</div>
 <footer class="page-footer">
     <div class="wrap">
 
@@ -62,8 +65,10 @@ $date = date('Y');
 
     </div>
 </footer>
-<script src="./assets/js/jquery.js" type="text/javascript"></script>
-<script src="./assets/js/bootstrap.js" type="text/javascript"></script>
+<script src="assets/js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var macouleur="white"
+</script>
+<script src="assets/js/pluie.js" type="text/javascript"></script>
 </body>
 </html>
-

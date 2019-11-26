@@ -22,15 +22,25 @@ if (isset($_POST['barnabe'])) {
         echo "Test matching login/password";
         $getDatas = "SELECT * FROM t_users WHERE USEMAIL='" . $mail . "'";
         $result = $pdo->query($getDatas)->fetch(PDO::FETCH_ASSOC);
-        $_SESSION['nom'] = $result['USENOM'];
-        $_SESSION['prenom'] = $result['USEPRENOM'];
-        $hash = $result['USEPASSWORD'];
-        if (password_verify($mdp, $hash)) {
-            $_SESSION['login'] = 1;
-            $redirection = "<script>document.location.href='http://localhost/carnex'</script>";
-            echo "Vous êtes maintenant connecté";
-        } else {
-            echo "L'adresse et le mot de passe ne correspondent pas !";
+        if(!empty($result)) {
+
+
+
+            $hash = $result['USEPASSWORD'];
+            if (password_verify($mdp, $hash)) {
+                $_SESSION['login'] = array(
+                    'id' => $result['Id_Users'],
+                    'email' => $result['USEMAIL'],
+                    'role'  => $result['role'],
+                    'ip' => $_SERVER['REMOTE_ADDR']
+                );
+                header('Location: index.php');
+                //$redirection = "<script>document.location.href='http://localhost/carnex'</script>";
+
+                echo "Vous êtes maintenant connecté";
+            } else {
+                echo "L'adresse et le mot de passe ne correspondent pas !";
+            }
         }
         /*$mdp = password_verify($mdp, $hash);
         $sql = "SELECT COUNT(*) FROM t_users WHERE USEMAIL='". $mail . "' AND USEPASSWORD ='" . $mdp . "''";
