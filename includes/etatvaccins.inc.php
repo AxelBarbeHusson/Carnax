@@ -1,1 +1,0 @@
-<h1 id="nav">Etat Vaccins</h1>
