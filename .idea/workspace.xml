@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="476e2450-c33e-4a22-b028-88658db43ea3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/includes/addVaccins.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/editVaccins.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/frmVaccins.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +37,13 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../exercice" />
+    <property name="last_opened_file_path" value="C:/xampp/htdocs/php5" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\web\Carnax\includes" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -67,6 +75,7 @@
       <workItem from="1574176362194" duration="1417000" />
       <workItem from="1574329845854" duration="155000" />
       <workItem from="1574669646036" duration="4258000" />
+      <workItem from="1574693017697" duration="4562000" />
     </task>
     <task id="LOCAL-00001" summary="ajout du .gitignore">
       <created>1574075026874</created>
