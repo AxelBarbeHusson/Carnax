@@ -1,4 +1,4 @@
-<h1>Inscription</h1>
+<h1>Inscriptions</h1>
 <?php
 if (isset($_POST['maurice'])) {
     $nom = isset($_POST['nom']) ? clean($_POST['nom']) : "";
